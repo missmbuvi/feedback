@@ -58,7 +58,4 @@ final-summative-project-team-a/
 - Ensure your code is well-formatted and commented.
 - Submit a pull request with a description of your changes.
 
----
-
-## Credits
-- Project by **Team A**
+--
