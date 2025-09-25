@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rate & Win - Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    .hero-bg {
+      background: url('assets/img/landing\ page.jpg') center center/cover no-repeat;
+      min-height: 600px;
+      position: relative;
+      border-radius: 0.5rem;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(91, 24, 22, 0.45);
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-title {
+      color: #fff;
+      font-size: 2.2rem;
+      font-weight: 600;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      font-family: 'Playfair Display', serif;
+    }
+    .opinion-card {
+      background: #e9c7c0;
+      border: none;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .opinion-title {
+      color: #5B1816;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+    .how-card {
+      background: #e9c7c0;
+      border: none;
+      border-radius: 0.5rem;
+      text-align: center;
+      padding: 2rem 1rem 1.5rem 1rem;
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 60px;
+      box-shadow: 0 2px 8px #0000000d;
+    }
+    .how-step {
+      color: #5B1816;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    :root {
+  --footer-red: #5B1816;
+  --white: #ffffff;
+}
+
+    /* Footer */
+.footer {
+  background-color: var(--footer-red);
+}
+
+.footer img {
+  filter: brightness(0) invert(1);
+}
+
+.footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 5px;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 0.95rem;
+}
+
+.footer div {
+  font-size: 1rem;
+}
+    .how-step-circle {
+      width: 56px;
+      height: 56px;
+      background: #fff;
+      color: #5B1816;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .how-step-desc {
+      color: #5B1816;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+    @media (max-width: 767px) {
+      .hero-title { font-size: 1.3rem; }
+      .opinion-title { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body class="bg-light">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" style="background: #e9c7c0;">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="assets/img/Rate & Win 10.PNG" alt="Logo" width="150" height="150" class="me-2">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="landing.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="restaurants.html">Restaurants</a></li>
+          <li class="nav-item"><a class="nav-link" href="FAQS.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="profile.html">My Profile</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="container mt-4">
+    <div class="hero-bg position-relative">
+      <div class="hero-overlay">
+        <h1 class="hero-title text-center">Welcome to Rate & Win</h1>
+      </div>
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Hero" class="img-fluid d-md-none" style="border-radius: 0.5rem; width: 100%; height: 220px; object-fit: cover; opacity: 0;">
+    </div>
+    <!-- Opinion Card -->
+    <div class="card opinion-card mx-auto mt-4 p-4" style="max-width: 600px;">
+      <div class="opinion-title mb-2">YOUR<br>OPINION<br>MATTERS!</div>
+      <div class="mb-3">Help restaurants improve and get<br> rewarded!</div>
+      <a href="restaurants.html" class="btn btn-white text-white" style="background-color: #5B1816; width: 100px;">Start Now</a>
+    </div>
+  </div>
+
+  <!-- How it Works -->
+  <div class="container mt-5 how-it-works-section">
+    <h4 class="mb-4" style="color: #5B1816; font-weight: 700;">How it works</h4>
+    <div class="row g-3 justify-content-center">
+      <div class="col-md-4">
+        <div class="how-card">
+          <div class="how-step-circle">1</div>
+          <div class="how-step-desc">Choose a Restaurant</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="how-card">
+          <div class="how-step-circle">2</div>
+          <div class="how-step-desc">Share your feedback</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="how-card">
+          <div class="how-step-circle">3</div>
+          <div class="how-step-desc">Earn points and win rewards</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark-red text-white py-4">
+    <div class="container d-flex justify-content-between align-items-start">
+      <div>
+        <img src="assets/img/Rate & Win 11.png" alt="Logo" width="150">
+      </div>
+      <ul class="list-unstyled">
+        <li><a href="landing.html" class="text-white">Home</a></li>
+        <li><a href="restaurants.html" class="text-white">Restaurants</a></li>
+        <li><a href="FAQS.html" class="text-white">FAQ</a></li>
+        <li><a href="profile.html" class="text-white">My Profile</a></li>
+      </ul>
+    </div>
+    <div class="text-center mt-3">© 2025 Rate & Win</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

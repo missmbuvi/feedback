@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rate & Win - Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <div class="container d-flex justify-content-center align-items-center min-vh-100 px-3">
+    <div class="card p-4 shadow w-100" style="max-width: 500px; background-color: #E6CEC9;">
+      <img src="assets/img/Rate & Win 10.PNG" alt="Rate & Win Logo" class="mx-auto d-block mb-3" style="width: 200px; height: 200px;">
+      <h3 class="text-center mb-4" style="color: #5B1816; font-weight: 500;">Sign In To Your Account</h3>
+      <form id="loginForm">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" required />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Enter your password" required />
+        </div>
+        <button type="submit" class="btn btn-none w-100" style="background-color: #5B1816; color: white;">Login</button>
+        <p class="text-center mt-3">Don't have an account? 
+          <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" style="text-decoration: none; color: #5B1816;">Sign Up</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Registration Modal -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-4" style="background-color: #E6CEC9;">
+        <h5 class="modal-title mb-3" id="registerModalLabel" style="color: #5B1816;">Create an Account</h5>
+        <form id="registerForm">
+          <div class="mb-3">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required />
+          </div>
+          <div class="mb-3">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required />
+          </div>
+          <div class="mb-3">
+            <label for="regEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="regEmail" placeholder="Enter your email address" required />
+          </div>
+          <div class="mb-3">
+            <label for="gender" class="form-label">Gender</label>
+            <select class="form-select" id="gender" required>
+              <option value="">Select your gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="regPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="regPassword" placeholder="Create a password" required />
+          </div>
+          <div class="mb-3">
+            <label for="confirmPassword" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required />
+          </div>
+          <button type="submit" class="btn btn-none w-100" style="background-color: #5B1816; color: white;">Register</button>
+          <p class="text-center mt-3">Already have an account? 
+            <a href="index.html" style="text-decoration: none; color: #5B1816;">Log In</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+{
+  "users": [
+    {
+      "id": "a8cc",
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "email": "janedoe123@gmail.com",
+      "gender": "female",
+      "password": "Jane@123",
+      "points": 25,
+      "claimedRewards": []
+    },
+    {
+      "id": "9337",
+      "firstName": "Daniel",
+      "lastName": "James",
+      "email": "danieljames12@gmail.com",
+      "gender": "male",
+      "password": "Daniel123",
+      "points": 0
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "1",
+      "name": "Crystal Lounge",
+      "logoUrl": "https://pbs.twimg.com/profile_images/1773389480499523589/l_HHJwsq_400x400.jpg",
+      "location": "Kigali"
+    },
+    {
+      "id": "2",
+      "name": "14th Avenue Restaurant",
+      "logoUrl": "https://static1.squarespace.com/static/630d152b917e7b45185930e0/t/672ca7ac7721bf3f97a03d56/1730979761845/PNG-04.png?format=1500w",
+      "location": "Kigali"
+    },
+    {
+      "id": "3",
+      "name": "The Hut Restaurant",
+      "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD3oK2aQ5BDmMSRaiWSw0kaQoXYx0u8SmZtQ&s",
+      "location": "Kigali"
+    },
+    {
+      "id": "4",
+      "name": "Kurry Kingdom",
+      "logoUrl": "https://lh5.googleusercontent.com/proxy/rWS8bzRSUxh1DfDAXozhQxqlQuZiSKAmPeq6vtioP6880aYF0P0-4vkg2vi24TY_94j9VQumRpFy2tyKHhSewfE",
+      "location": "Kigali"
+    },
+    {
+      "id": "5",
+      "name": "Inka Steakhouse",
+      "logoUrl": "https://vibekigali.com/wp-content/uploads/2021/06/Inka_Steakhouse_Kigali_Restaurant_1.jpg",
+      "location": "Kigali"
+    },
+    {
+      "id": "6",
+      "name": "Le Muguet",
+      "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi2UVNEw-9NH6gwSqv4PCrgfuKo3GGxUHgkQ&s",
+      "location": "Kigali"
+    },
+    {
+      "id": "7",
+      "name": "Boho Restaurant",
+      "logoUrl": "https://static.wixstatic.com/media/196173_dcc5d865042243cdb0f9a27d139e4f6e~mv2.jpg/v1/fit/w_2500,h_1330,al_c/196173_dcc5d865042243cdb0f9a27d139e4f6e~mv2.jpg",
+      "location": "Kigali"
+    },
+    {
+      "id": "8",
+      "name": "Rua Restaurant",
+      "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJnyEw1jNGTCg0xqyjl5ZCJJGEd1flNxJF8g&s",
+      "location": "Kigali"
+    }
+  ],
+  "feedback": [
+    {
+      "id": "5e32",
+      "userId": "a8cc",
+      "userFirstName": "Jane",
+      "restaurantId": "1",
+      "rating": "Excellent",
+      "quality": "Good",
+      "hygiene": "No",
+      "speed": "Acceptable",
+      "courteous": "Yes",
+      "cleanliness": "Good",
+      "orderTime": "Yes",
+      "recommend": "Yes",
+      "comments": "Decent Restaurant",
+      "timestamp": "2025-08-03T10:53:07.729Z"
+    }
+  ]
+}

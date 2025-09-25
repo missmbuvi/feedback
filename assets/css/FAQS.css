@@ -1,0 +1,133 @@
+/* Root variables */
+:root {
+  --light-pink: #e6cfcb;
+  --dark-red: #8e534e;
+  --footer-red: #4a1f1c;
+  --white: #ffffff;
+  --text-dark: #333;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* General Reset */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--white);
+  color: var(--text-dark);
+}
+
+/* Header */
+header.bg-light-pink {
+  background-color: var(--light-pink);
+}
+
+header .logo span {
+  font-size: 1.2rem;
+  color: var(--dark-red);
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+header nav a.fw-bold {
+  font-weight: 700;
+}
+
+/* FAQ Section */
+.faq {
+  background-color: var(--white);
+}
+
+.faq h2 {
+  font-weight: bold;
+  color: var(--dark-red);
+}
+
+.faq-card {
+  background-color: var(--light-pink);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.faq-card:hover {
+  background-color: #e0beb8;
+}
+
+.faq-question {
+  font-weight: bold;
+  color: var(--dark-red);
+}
+
+.faq-answer {
+  margin-top: 10px;
+  display: none;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+}
+
+.faq-answer.show {
+  display: block;
+}
+:root {
+  --footer-red: #5B1816;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--footer-red);
+}
+
+.footer img {
+  filter: brightness(0) invert(1);
+}
+
+.footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 5px;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 0.95rem;
+}
+
+.footer div {
+  font-size: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .faq h2 {
+    font-size: 1.5rem;
+  }
+
+  .faq-card {
+    padding: 15px;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer ul {
+    margin-top: 15px;
+  }
+}

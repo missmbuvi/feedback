@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rate & Win Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .container {
+        max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+      
+    }
+
+  
+    .header {
+      background-color: #d9b2aa;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header img {
+      height: 60px;
+    }
+
+    .header nav a {
+      margin-left: 20px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .header .profile-img {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+  
+    .profile-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .profile-section img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+    }
+
+    .edit-btn {
+      margin-left: auto;
+      background-color: #751d1d;
+      color: white;
+      border-radius: 8px;
+      padding: 8px 16px;
+      border: none;
+    }
+
+
+    .rewards-progress {
+      margin-top: 40px;
+    }
+
+    .progress-bar {
+      background-color: #751d1d;
+    }
+
+    .rewards-container {
+      background-color: #ebcbc3;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+      overflow-x: auto;
+}
+
+    
+    .rewards-scroll {
+      display: flex;
+      gap: 20px;
+      min-width: max-content;
+    }
+
+    .reward-card {
+      flex: 0 0 auto;
+      width: 160px;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .reward-card img {
+      width: 100%;
+      height: 100px;
+      object-fit: contain;
+    }
+
+    .reward-card .btn {
+      margin-top: 8px;
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+
+
+
+
+
+
+  .reward-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: none;
+  }
+
+.reward-popup img {
+  width: 60px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  display: none;
+}
+
+.popup-close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #aaa;
+}
+.popup-close:hover {
+  color: black;
+}
+
+    footer.footer-bg {
+      background-color: #5B1816;
+      color: white;
+      padding: 20px 0;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg" style="background: #e9c7c0;">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="assets/img/Rate & Win 10.PNG" alt="Logo" width="150" height="150" class="me-2">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="landing.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="restaurants.html">Restaurants</a></li>
+          <li class="nav-item"><a class="nav-link" href="FAQS.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="profile.html">My Profile</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="profile-section">
+      <div>
+        <h4>example</h4>
+        <p>example@gmail.com</p>
+      </div>
+      <div class="ms-auto d-flex flex-column flex-sm-row gap-2">
+        <button class="edit-btn w-100 w-sm-auto">Edit</button>
+        <button class="edit-btn w-100 w-sm-auto" id="logoutBtn" style="background-color: #E6CEC9; color: #5B1816;">Logout</button>
+      </div>
+
+    </div>
+
+    
+    <!-- <div class="rewards-progress">
+      <h6>Rewards Progress</h6>
+      <div class="progress mb-2" style="height: 10px;">
+        <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
+      </div>
+      <p><span id="pointsText">Loading...</span></p>
+    </div> -->
+
+    <h5>Rewards Progress</h5>
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0"
+       aria-valuemin="0" aria-valuemax="5000"></div>
+    </div>
+    <p class="progress-text">You've earned 0 out of 5000 points</p>
+
+
+    <h6 class="mt-4">My Rewards</h6>
+    <p>Review to earn more rewards</p>
+    <div class="rewards-container">
+      <div class="rewards-scroll">
+        <div id="rewardTemplate" class="reward-card d-none">
+        <img src="" alt="">
+        <p class="fw-bold mt-2 reward-name">Reward Name</p>
+        <p class="text-muted reward-points">X Points</p>
+        <button class="btn btn-danger reward-btn" disabled>Locked</button>
+      </div>
+      </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    
+    <!-- Add space before footer -->
+    <div style="margin-bottom: 60px;"></div>
+
+    <!-- Reward Card -->
+    <div class="reward-popup text-center" id="rewardPopup">
+      <span class="popup-close" id="closePopup">&times;</span>
+      <img src="assets/img/Rate & Win 10.PNG" alt="Logo" class="mb-2" style="width: 60px;">
+      <h5>Congratulations!</h5>
+      <p class="mb-1">You've won a Reward</p>
+      <p class="fw-bold">Reward Type: <span id="rewardName">Reward</span></p>
+      <p class="text-muted small">
+        Eligibility: This reward is valid at all restaurants that are within this platform.
+      </p>
+    </div>
+
+
+<!-- Edit Profile -->
+      <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form id="editProfileForm">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
+              </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="firstNameInput" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="firstNameInput" required>
+                </div>
+                <div class="mb-3">
+                  <label for="lastNameInput" class="form-label">Last Name</label>
+                  <input type="text" class="form-control" id="lastNameInput" required>
+                </div>
+                <div class="mb-3">
+                  <label for="emailInput" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="emailInput" required>
+                </div>
+                <div class="mb-3">
+                  <label for="passwordInput" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="passwordInput">
+                  <div class="form-text">Leave blank to keep existing password.</div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-white" style= "background-color: #5B1816; color: white; font-weight: bold;">Update Profile</button>
+                <button type="button" class="btn btn-white" data-bs-dismiss="modal" style="background-color: #E6CEC9; color: #5B1816; font-weight: bold;">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer text-white py-4" style="background-color: #5B1816;">
+  <div class="container d-flex justify-content-between align-items-start">
+    <div>
+      <img src="assets/img/Rate & Win 11.png" alt="Logo" width="150">
+    </div>
+    <ul class="list-unstyled">
+      <li><a href="landing.html" class="text-white">Home</a></li>
+      <li><a href="restaurants.html" class="text-white">Restaurants</a></li>
+      <li><a href="FAQS.html" class="text-white">FAQ</a></li>
+      <li><a href="profile.html" class="text-white">My Profile</a></li>
+    </ul>
+  </div>
+  <div class="text-center mt-3">© 2025 Rate & Win</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="assets/js/profile.js"></script>
+
+</body>
+</html>
